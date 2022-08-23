@@ -12,6 +12,7 @@ namespace PasswordBank
 {
     public partial class PasswordBank : Form
     {
+        string[] SavePasswords = new string[2];
         public PasswordBank()
         {
             InitializeComponent();
@@ -39,6 +40,17 @@ namespace PasswordBank
             const string chars = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789!@#$%^&*";
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+        private void btn_SavePassword_Click(object sender, EventArgs e)
+        {
+            SavePasswords[1] = SavePasswords[0];
+            SavePasswords[0] = tb_Password.Text;
+        }
+
+        private void btn_ShowPassword_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("New Password: " + SavePasswords[0] + "\nOld Password: " + SavePasswords[1]);
         }
     }
 }
