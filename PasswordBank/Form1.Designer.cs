@@ -37,6 +37,8 @@ namespace PasswordBank
             this.tb_Website = new System.Windows.Forms.TextBox();
             this.lb_Generate_Password_Field = new System.Windows.Forms.Label();
             this.lb_Website = new System.Windows.Forms.Label();
+            this.lb_Email = new System.Windows.Forms.Label();
+            this.tb_Email = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_Generate
@@ -49,7 +51,7 @@ namespace PasswordBank
             this.btn_Generate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Generate.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Generate.ForeColor = System.Drawing.Color.White;
-            this.btn_Generate.Location = new System.Drawing.Point(167, 271);
+            this.btn_Generate.Location = new System.Drawing.Point(12, 264);
             this.btn_Generate.Name = "btn_Generate";
             this.btn_Generate.Size = new System.Drawing.Size(149, 39);
             this.btn_Generate.TabIndex = 0;
@@ -62,7 +64,7 @@ namespace PasswordBank
             this.tb_Password.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Password.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_Password.Location = new System.Drawing.Point(12, 160);
+            this.tb_Password.Location = new System.Drawing.Point(12, 203);
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.ReadOnly = true;
             this.tb_Password.Size = new System.Drawing.Size(254, 38);
@@ -79,7 +81,7 @@ namespace PasswordBank
             this.btn_SavePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SavePassword.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SavePassword.ForeColor = System.Drawing.Color.White;
-            this.btn_SavePassword.Location = new System.Drawing.Point(12, 271);
+            this.btn_SavePassword.Location = new System.Drawing.Point(177, 335);
             this.btn_SavePassword.Name = "btn_SavePassword";
             this.btn_SavePassword.Size = new System.Drawing.Size(149, 39);
             this.btn_SavePassword.TabIndex = 3;
@@ -97,7 +99,7 @@ namespace PasswordBank
             this.btn_ShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ShowPassword.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ShowPassword.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowPassword.Location = new System.Drawing.Point(322, 271);
+            this.btn_ShowPassword.Location = new System.Drawing.Point(12, 335);
             this.btn_ShowPassword.Name = "btn_ShowPassword";
             this.btn_ShowPassword.Size = new System.Drawing.Size(149, 39);
             this.btn_ShowPassword.TabIndex = 4;
@@ -110,9 +112,8 @@ namespace PasswordBank
             this.tb_Website.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tb_Website.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Website.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_Website.Location = new System.Drawing.Point(12, 84);
+            this.tb_Website.Location = new System.Drawing.Point(12, 55);
             this.tb_Website.Name = "tb_Website";
-            this.tb_Website.ReadOnly = true;
             this.tb_Website.Size = new System.Drawing.Size(254, 38);
             this.tb_Website.TabIndex = 5;
             this.tb_Website.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -123,7 +124,7 @@ namespace PasswordBank
             this.lb_Generate_Password_Field.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lb_Generate_Password_Field.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold);
             this.lb_Generate_Password_Field.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lb_Generate_Password_Field.Location = new System.Drawing.Point(12, 140);
+            this.lb_Generate_Password_Field.Location = new System.Drawing.Point(12, 183);
             this.lb_Generate_Password_Field.Name = "lb_Generate_Password_Field";
             this.lb_Generate_Password_Field.Size = new System.Drawing.Size(145, 17);
             this.lb_Generate_Password_Field.TabIndex = 6;
@@ -135,18 +136,43 @@ namespace PasswordBank
             this.lb_Website.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lb_Website.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold);
             this.lb_Website.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lb_Website.Location = new System.Drawing.Point(12, 64);
+            this.lb_Website.Location = new System.Drawing.Point(12, 35);
             this.lb_Website.Name = "lb_Website";
             this.lb_Website.Size = new System.Drawing.Size(62, 17);
             this.lb_Website.TabIndex = 7;
             this.lb_Website.Text = "Website";
+            // 
+            // lb_Email
+            // 
+            this.lb_Email.AutoSize = true;
+            this.lb_Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.lb_Email.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_Email.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lb_Email.Location = new System.Drawing.Point(12, 108);
+            this.lb_Email.Name = "lb_Email";
+            this.lb_Email.Size = new System.Drawing.Size(47, 17);
+            this.lb_Email.TabIndex = 9;
+            this.lb_Email.Text = "Email";
+            // 
+            // tb_Email
+            // 
+            this.tb_Email.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Email.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tb_Email.Location = new System.Drawing.Point(12, 128);
+            this.tb_Email.Name = "tb_Email";
+            this.tb_Email.Size = new System.Drawing.Size(254, 38);
+            this.tb_Email.TabIndex = 8;
+            this.tb_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PasswordBank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(486, 322);
+            this.ClientSize = new System.Drawing.Size(587, 389);
+            this.Controls.Add(this.lb_Email);
+            this.Controls.Add(this.tb_Email);
             this.Controls.Add(this.lb_Website);
             this.Controls.Add(this.lb_Generate_Password_Field);
             this.Controls.Add(this.tb_Website);
@@ -173,6 +199,8 @@ namespace PasswordBank
         private System.Windows.Forms.TextBox tb_Website;
         private System.Windows.Forms.Label lb_Generate_Password_Field;
         private System.Windows.Forms.Label lb_Website;
+        private System.Windows.Forms.Label lb_Email;
+        private System.Windows.Forms.TextBox tb_Email;
     }
 }
 

@@ -12,7 +12,10 @@ namespace PasswordBank
 {
     public partial class PasswordBank : Form
     {
-        string[] SavePasswords = new string[2];
+        string[] SaveWebsites = new string[1000];
+        string[] SaveEmails = new string[1000];
+        string[] SavePasswords = new string[1000];
+        int LoginCount = 0;
         public PasswordBank()
         {
             InitializeComponent();
@@ -44,13 +47,22 @@ namespace PasswordBank
 
         private void btn_SavePassword_Click(object sender, EventArgs e)
         {
-            SavePasswords[1] = SavePasswords[0];
-            SavePasswords[0] = tb_Password.Text;
+            if (tb_Website != null && tb_Email != null && tb_Password != null)
+            {
+                SaveWebsites[LoginCount] = tb_Website.Text;
+                SaveEmails[LoginCount] = tb_Email.Text;
+                SavePasswords[LoginCount] = tb_Password.Text;
+                LoginCount++;
+            }
+            else
+            {
+                MessageBox.Show("Fill out all the fields");
+            }
         }
 
         private void btn_ShowPassword_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("New Password: " + SavePasswords[0] + "\nOld Password: " + SavePasswords[1]);
+            MessageBox.Show(SaveWebsites[0] + " : " + SaveEmails[0] + " : " + SavePasswords[0] + "\n" + SaveWebsites[1] + " : " + SaveEmails[1] + " : " + SavePasswords[1]);
         }
     }
 }
